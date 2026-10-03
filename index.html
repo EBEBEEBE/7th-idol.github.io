@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en" data-locale="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>T7S Character Catalog</title>
+  <link rel="stylesheet" href="styles.css?v=contact-footer-1">
+</head>
+<body>
+  <main class="app">
+    <header class="hero">
+      <div><p class="eyebrow" data-i18n="ui.prototype">T7S CHARACTER CATALOG · PROTOTYPE</p><h1 id="section-name" data-i18n="page.index">Characters</h1></div>
+      <div class="hero-actions">
+        <button id="header-switch-character" class="header-switch-character" type="button" popovertarget="character-switcher-popover" aria-controls="character-switcher-popover" aria-expanded="false" hidden><span data-i18n="ui.switch_character">Switch character</span></button>
+        <p id="section-stats" class="stat"></p>
+      </div>
+    </header>
+    <div id="character-switcher-popover" class="character-switcher-popover" popover="auto">
+      <label><span class="sr-only" data-i18n="ui.search_characters">Search characters</span><input id="character-switch-search" type="search" placeholder="Search characters"></label>
+      <div id="character-switch-list" class="character-switch-list"></div>
+    </div>
+    <section id="character-hero" class="character-hero" hidden>
+      <div class="character-hero-copy"><p class="eyebrow">CHARACTER PROFILE</p><h2 id="character-name" data-i18n="ui.loading">Loading…</h2><p id="character-meta" class="meta"></p><p id="character-stats" class="character-hero-stats"></p></div>
+      <img id="character-hero-gacha" class="character-hero-gacha" alt="" aria-hidden="true" hidden>
+    </section>
+    <nav id="character-navigation" class="character-navigation" aria-label="Character navigation" hidden></nav>
+    <section id="toolbar" class="toolbar">
+      <nav id="filters" class="filters" aria-label="Categories"></nav>
+      <div class="toolbar-options"><label class="sort"><span data-i18n="ui.sort">Sort</span> <select id="sort-select"><option value="id" data-i18n="ui.card_id">Card ID</option><option value="rarity" data-i18n="ui.rarity">Rarity</option><option value="name" data-i18n="ui.card_name">Card name</option><option value="type" data-i18n="ui.card_type">Card type</option><option value="limited" data-i18n="ui.limited">Limited</option><option value="release" data-i18n="ui.release_time">Release time</option></select></label><button id="sort-direction" class="button secondary" type="button" aria-pressed="false">Ascending</button><div id="adv-options" class="adv-options" hidden><span>ADV options available in detail view</span></div></div>
+    </section>
+    <section id="card-filters" class="card-filters" hidden aria-label="Card filters">
+      <button id="card-filters-toggle" class="filter-toggle" type="button" aria-expanded="false" aria-controls="card-filters-content"><span data-i18n="ui.filter_cards">Filter cards</span><span aria-hidden="true">▾</span></button>
+      <div id="card-filters-content" class="card-filters-content" hidden>
+        <fieldset><legend>Rarity</legend><div id="rarity-filter" class="check-options"></div></fieldset>
+        <fieldset><legend data-i18n="ui.limited">Limited</legend><div id="limited-filter" class="check-options"><label><input type="checkbox" value="1"> <span data-i18n="ui.yes">Yes</span></label><label><input type="checkbox" value="0"> <span data-i18n="ui.no">No</span></label></div></fieldset>
+        <fieldset><legend>Card type</legend><div id="type-filter" class="check-options"></div></fieldset>
+        <button id="clear-card-filters" class="button secondary" data-i18n="ui.clear">Clear</button>
+      </div>
+    </section>
+    <section id="grid" class="grid" aria-live="polite"></section>
+    <footer class="site-footer"><a href="https://lit.link/yumenara_iinoni" target="_blank" rel="noopener noreferrer" data-i18n="ui.contact">Contact</a></footer>
+  </main>
+  <dialog id="detail-dialog"><button id="close-detail" class="close" aria-label="Close" data-i18n="ui.close">×</button><div id="detail-content"></div></dialog>
+  <dialog id="card-image-dialog" class="card-image-dialog"><button id="close-card-image" class="close" aria-label="Close" data-i18n="ui.close">×</button><div class="image-viewer-toolbar"><strong id="card-image-title" data-i18n="ui.card_image">Card image</strong><label>View <select id="card-image-mode"><option value="fit" data-i18n="ui.fit_window">Fit to window</option><option value="zoom" data-i18n="ui.zoom">Zoom</option></select></label><button id="zoom-out" class="button secondary">−</button><span id="zoom-level">100%</span><button id="zoom-in" class="button secondary">+</button></div><div id="card-image-stage" class="card-image-stage"><img id="card-image-viewer" alt=""></div></dialog>
+  <script src="content-config.js?v=content-root-1"></script>
+  <script src="i18n.js?v=locale-10"></script>
+  <script src="app.js?v=npc-character-search-2"></script>
+</body>
+</html>
