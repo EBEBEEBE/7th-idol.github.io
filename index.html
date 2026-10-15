@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <title>T7S Character Catalog</title>
-  <link rel="stylesheet" href="styles.css?v=contact-footer-1">
+  <link rel="stylesheet" href="styles.css?v=privacy-footer-1">
 </head>
 <body>
   <main class="app">
@@ -38,7 +38,24 @@
       </div>
     </section>
     <section id="grid" class="grid" aria-live="polite"></section>
-    <footer class="site-footer"><a href="https://lit.link/yumenara_iinoni" target="_blank" rel="noopener noreferrer" data-i18n="ui.contact">Contact</a></footer>
+    <footer class="site-footer">
+      <div class="footer-notices">
+        <section class="footer-notice footer-notice-privacy" aria-labelledby="footer-privacy-heading">
+          <h2 id="footer-privacy-heading">Privacy</h2>
+          <p>This website does not use analytics, advertising trackers, or other tracking technologies. Web analytics have been disabled on purpose for this domain. No visitor personal information or identifiers are intentionally collected, stored, or analyzed.</p>
+          <p>However, hosting providers (Cloudflare, in this case) may process routine technical information required to host and run the website.</p>
+        </section>
+        <section class="footer-notice" aria-labelledby="footer-disclaimer-heading">
+          <h2 id="footer-disclaimer-heading">Disclaimer</h2>
+          <p>This is an unofficial fan project and is not affiliated with DONUTS Co., Ltd., Donuts Games, or any parties of the original copyright holders. All rights belong to their respective owners.</p>
+        </section>
+        <section class="footer-notice" aria-labelledby="footer-ai-heading">
+          <h2 id="footer-ai-heading">Generative AI usage disclosure</h2>
+          <p>No images displayed on this website are AI-generated. LLMs were used to assist with website development and programming.</p>
+        </section>
+      </div>
+      <p class="footer-contact"><a href="https://lit.link/yumenara_iinoni" target="_blank" rel="noopener noreferrer" data-i18n="ui.contact">Contact</a></p>
+    </footer>
   </main>
   <dialog id="detail-dialog"><button id="close-detail" class="close" aria-label="Close" data-i18n="ui.close">×</button><div id="detail-content"></div></dialog>
   <dialog id="card-image-dialog" class="card-image-dialog"><button id="close-card-image" class="close" aria-label="Close" data-i18n="ui.close">×</button><div class="image-viewer-toolbar"><strong id="card-image-title" data-i18n="ui.card_image">Card image</strong><label>View <select id="card-image-mode"><option value="fit" data-i18n="ui.fit_window">Fit to window</option><option value="zoom" data-i18n="ui.zoom">Zoom</option></select></label><button id="zoom-out" class="button secondary">−</button><span id="zoom-level">100%</span><button id="zoom-in" class="button secondary">+</button></div><div id="card-image-stage" class="card-image-stage"><img id="card-image-viewer" alt=""></div></dialog>

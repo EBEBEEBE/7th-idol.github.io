@@ -975,13 +975,31 @@ dialog.card-image-dialog .card-image-stage img {
   }
 }
 .site-footer {
-  display: flex;
-  justify-content: flex-end;
-  margin-top: 34px;
-  padding: 13px 4px 0;
+  margin-top: 40px;
+  padding: 24px 4px 0;
   border-top: 1px solid var(--line);
-  color: var(--muted);
+  color: #4f6b91;
   font-size: 13px;
+  line-height: 1.7;
+}
+.footer-notices {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px 40px;
+}
+.footer-notice-privacy { grid-column: 1 / -1; }
+.footer-notice h2 {
+  margin: 0 0 8px;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.footer-notice p { margin: 0; }
+.footer-notice p + p { margin-top: 8px; }
+.footer-contact {
+  margin: 18px 0 0;
+  text-align: right;
 }
 .site-footer a {
   color: var(--blue-deep);
@@ -991,4 +1009,8 @@ dialog.card-image-dialog .card-image-stage img {
 .site-footer a:hover,
 .site-footer a:focus-visible {
   color: var(--pink);
+}
+@media (max-width: 700px) {
+  .footer-notices { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  .footer-contact { text-align: left; }
 }
